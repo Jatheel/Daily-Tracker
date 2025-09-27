@@ -1,0 +1,35 @@
+/* Tailwind's base styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* App-wide small tweaks for readable, mobile-first UI */
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  @apply bg-white text-gray-900;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* Reusable card */
+.card {
+  @apply bg-white rounded-xl shadow-sm border border-gray-200;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center px-4 py-3 rounded-lg text-sm font-medium transition-colors;
+}
+
+.btn-primary {
+  @apply bg-brand-600 text-white hover:bg-brand-700;
+}
+
+.btn-secondary {
+  @apply bg-gray-100 text-gray-900 hover:bg-gray-200;
+}
+
+.input {
+  @apply w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brand-400;
+}
