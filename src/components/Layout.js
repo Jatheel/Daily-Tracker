@@ -34,7 +34,7 @@ export default function Layout({ children }) {
 
       {/* Mobile bottom nav */}
       <nav className="md:hidden fixed bottom-0 left-0 right-0 border-t border-gray-200 bg-white">
-        <ul className="grid grid-cols-3">
+        <ul className="grid grid-cols-4">
           {tabs.map((t) => (
             <li key={t.href}>
               <Link href={t.href} className={`block text-center py-3 ${router.pathname === t.href ? "text-brand-700 font-semibold" : "text-gray-700"}`}>
