@@ -1,4 +1,4 @@
-# Daily Tracker (Next.js + Tailwind) — Local-only
+# Daily Tracker
 
 Personal daily updates and reminders app that runs entirely in your browser (no server, no database). Data is saved in localStorage with Export/Import backup.
 
@@ -54,43 +54,3 @@ postcss.config.js       # PostCSS plugins
 
 Tip: localStorage is per browser + per domain. To move data between machines or a deployed site, export on one and import on the other.
 
-## Deploy (Vercel)
-This is a standard Next.js app. No env vars are required.
-
-1) Push to GitHub
-2) Import the repo in https://vercel.com → Deploy
-
-## Git workflow (basics)
-
-Initial push:
-```
-git init
-git add -A
-git commit -m "chore: initial commit"
-git branch -M main
-git remote add origin https://github.com/<you>/<repo>.git
-git push -u origin main
-```
-
-Daily changes:
-```
-git add -A
-git commit -m "feat: <what you changed>"
-git push
-```
-
-Optional branches:
-```
-git checkout -b feature/<name>
-# edit files
-git add -A && git commit -m "feat: <thing>"
-git push -u origin feature/<name>
-```
-
-## Troubleshooting
-- Tailwind warnings in editor for `@tailwind` or `@apply` are normal; the dev build handles them.
-- If you don’t see your data after deployment, remember localStorage is separate on each domain. Use Backup → Import.
-
----
-
-Note: Supabase and authentication were removed to simplify setup. Use the Backup page to export/import your data between browsers/devices.
